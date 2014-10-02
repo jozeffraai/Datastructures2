@@ -27,8 +27,8 @@ public class Klas {
         return naam;
     }
 
-    public void setNaam(String klaNaam) {
-        this.naam = klaNaam;
+    public void setNaam(String Naam) {
+        this.naam = Naam;
     }
 
     public int getAantalLeerlingen() {

@@ -4,21 +4,19 @@
  * and open the template in the editor.
  */
 package models;
-
 /**
  *
  * @author bob
  */
-public class Student extends Klas{
-    private int studentNummer;    
+public class Student{
+    private int studentNummer;
+    private String klasNaam;
     private double cijfer;
-    private Klas klas;
 
-    public Student(int studentNummer, double cijfer, Klas klas, String klaNaam, int aantalLeerlingen, String richting) {
-        super(klaNaam, aantalLeerlingen, richting);
+    public Student(int studentNummer, String klasNaam, double cijfer) {
         this.studentNummer = studentNummer;
+        this.klasNaam = klasNaam;
         this.cijfer = cijfer;
-        this.klas = klas.getNaam();
     }
 
     public int getStudentNummer() {
@@ -29,26 +27,19 @@ public class Student extends Klas{
         this.studentNummer = studentNummer;
     }
 
+    public String getKlasNaam() {
+        return klasNaam;
+    }
+
+    public void setKlasNaam(String klasNaam) {
+        this.klasNaam = klasNaam;
+    }
+
     public double getCijfer() {
         return cijfer;
     }
 
     public void setCijfer(double cijfer) {
         this.cijfer = cijfer;
-    }
-
-    public Klas getKlas() {
-        return klas;
-    }
-
-    public void setKlas(Klas klas) {
-        this.klas = klas;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" + "studentNummer=" + studentNummer + ", cijfer=" + cijfer + ", klas=" + klas + '}';
-    }
-    
-    
+    }   
 }

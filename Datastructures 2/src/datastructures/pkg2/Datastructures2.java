@@ -18,8 +18,8 @@ public class Datastructures2 {
      */
     public static void main(String[] args) {
         
-        Klas IS201 = new Klas("IS201", 20, "SE");
-        Student jozef = new Student(500685921, 5.5, IS201);
+//        Klas IS201 = new Klas("IS201", 20, "SE");
+        Student jozef = new Student(50060001, "IS201", 5.5);
         
     }
     

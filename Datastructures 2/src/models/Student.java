@@ -11,9 +11,9 @@ package models;
 public class Student{
     private int studentNummer;
     private String klasNaam;
-    private double cijfer;
+    private String cijfer;
 
-    public Student(int studentNummer, String klasNaam, double cijfer) {
+    public Student(int studentNummer, String klasNaam, String cijfer) {
         this.studentNummer = studentNummer;
         this.klasNaam = klasNaam;
         this.cijfer = cijfer;
@@ -35,11 +35,16 @@ public class Student{
         this.klasNaam = klasNaam;
     }
 
-    public double getCijfer() {
+    public String getCijfer() {
         return cijfer;
     }
 
-    public void setCijfer(double cijfer) {
+    public void setCijfer(String cijfer) {
         this.cijfer = cijfer;
-    }   
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "studentNummer=" + studentNummer + ", klasNaam=" + klasNaam + ", cijfer=" + cijfer + '}';
+    }
 }

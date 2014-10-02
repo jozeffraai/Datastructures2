@@ -45,6 +45,6 @@ public class Student{
 
     @Override
     public String toString() {
-        return "Student{" + "studentNummer=" + studentNummer + ", klasNaam=" + klasNaam + ", cijfer=" + cijfer + '}';
+        return studentNummer + "\t\t" + klasNaam + "\t\t" + cijfer;
     }
 }

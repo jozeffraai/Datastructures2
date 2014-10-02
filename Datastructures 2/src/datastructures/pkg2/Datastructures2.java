@@ -23,13 +23,13 @@ public class Datastructures2 {
     private static String[] laatsteGetal = {"1", "2", "3", "4"};
     
     public static void main(String[] args) {
-        int klasnummer = 50060001;
+        int studentnummer = 50060001;
         double rangeMin = 1.0;
         double rangeMax = 10.0;
         String klas;
         int aantalLeerlingen = 8;
         int richtingNummer = 0;
-        int getal = 0;
+        int getal = 1;
         
         
         Random r = new Random();
@@ -45,24 +45,26 @@ public class Datastructures2 {
 //        Student jozef = new Student(50060001, "IS201", 5.5);
         
 //        System.out.println(df.format(cijfer));
-        
+        System.out.println("Student Nummer \t\tKlas Naam \tCijfer");
         for (int i = 0; i < aantalLeerlingen; i++) {
             if (richtingNummer > 3){
                 richtingNummer = 0;
             }
-            if (getal > 3){
-                getal = 0;
+            if (getal > 4){
+                getal = 1;
             }
             
             klas = richting[richtingNummer] + "20" + getal;
             richtingNummer++;
+            
+            if(richtingNummer == 4)
             getal++;
             
             double cijfer = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
             String result = df.format(cijfer);
-            Student a = new Student(klasnummer, klas, result);
+            Student a = new Student(studentnummer, klas, result);
             System.out.println(a.toString());
-            klasnummer++;
+            studentnummer++;
         }
         
     }

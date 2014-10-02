@@ -5,6 +5,8 @@
  */
 package datastructures.pkg2;
 
+import models.*;
+
 /**
  *
  * @author Jozef Fraai
@@ -15,8 +17,10 @@ public class Datastructures2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //bullshit
+        
+        Klas IS201 = new Klas("IS201", 20, "SE");
+        Student jozef = new Student(500685921, 5.5, IS201);
+        
     }
     
 }

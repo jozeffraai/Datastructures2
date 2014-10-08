@@ -13,9 +13,8 @@ public class Student{
     private String klasNaam;
     private String cijfer;
 
-    public Student(int studentNummer, String klasNaam, String cijfer) {
+    public Student(int studentNummer, String cijfer) {
         this.studentNummer = studentNummer;
-        this.klasNaam = klasNaam;
         this.cijfer = cijfer;
     }
 
@@ -25,14 +24,6 @@ public class Student{
 
     public void setStudentNummer(int studentNummer) {
         this.studentNummer = studentNummer;
-    }
-
-    public String getKlasNaam() {
-        return klasNaam;
-    }
-
-    public void setKlasNaam(String klasNaam) {
-        this.klasNaam = klasNaam;
     }
 
     public String getCijfer() {
@@ -45,6 +36,6 @@ public class Student{
 
     @Override
     public String toString() {
-        return studentNummer + "\t\t" + klasNaam + "\t\t" + cijfer;
+        return studentNummer + "\t\t" + cijfer;
     }
 }

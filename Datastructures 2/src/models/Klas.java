@@ -5,20 +5,21 @@
  */
 package models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author bob
  */
 public class Klas {
     private String naam;
-    private static final int maxAantalLeerlingen = 32;
-    private int aantalLeerlingen;
-    private String richting;
+    private static final int maxAantalLeerlingen = 32;    
+    private ArrayList<Student> student;
 
-    public Klas(String klaNaam, int aantalLeerlingen, String richting) {
-        this.naam = klaNaam;
-        this.aantalLeerlingen = aantalLeerlingen;
-        this.richting = richting;
+    public Klas(String klasNaam) {
+        this.naam = klasNaam;   
+        
+        student = new ArrayList<Student>();
     }
     
     
@@ -31,21 +32,15 @@ public class Klas {
         this.naam = Naam;
     }
 
-    public int getAantalLeerlingen() {
-        return aantalLeerlingen;
+    public void addStudent(Student s){
+        student.add(s);
     }
 
-    public void setAantalLeerlingen(int aantalLeerlingen) {
-        this.aantalLeerlingen = aantalLeerlingen;
+    @Override
+    public String toString() {
+        return naam + "\t\t" + student;
     }
-
-    public String getRichting() {
-        return richting;
-    }
-
-    public void setRichting(String richting) {
-        this.richting = richting;
-    }
+    
     
     
     

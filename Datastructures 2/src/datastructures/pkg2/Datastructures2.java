@@ -33,7 +33,7 @@ public class Datastructures2 {
         
         
         Random r = new Random();
-        DecimalFormat df = new DecimalFormat("##.#");
+        DecimalFormat df = new DecimalFormat("##.0");
         
         for (int i = 0; i < aantalLeerlingen; i++) {
             

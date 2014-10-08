@@ -27,26 +27,26 @@ public class Datastructures2 {
         double rangeMin = 1.0;
         double rangeMax = 10.0;
         String klas;
-        int aantalLeerlingen = 200;
+        int aantalLeerlingen = 800;
+        int b = aantalLeerlingen;
         int richtingNummer = 0;
         int getal = 1;
+        int aantalKlassen = 4;
+        
+        int aantalStudentRichting = aantalLeerlingen / 4;
+        aantalKlassen = klassenAantal(aantalStudentRichting, aantalKlassen);
+        
+        System.out.println(aantalKlassen);      
+        
        
         
         Random r = new Random();
         DecimalFormat df = new DecimalFormat("##.0");
         
-        for (int i = 0; i < aantalLeerlingen; i++) {
-            
-        }
         
-        
-        
-//        Klas IS201 = new Klas("IS201", 20, "SE");
-//        Student jozef = new Student(50060001, "IS201", 5.5);
-        
-//        System.out.println(df.format(cijfer));
         System.out.println("Klas\t\tStudent Nummer  \tCijfer");
         for (int i = 0; i < aantalLeerlingen; i++) {
+            
             if (richtingNummer > 3){
                 richtingNummer = 0;
             }
@@ -62,14 +62,30 @@ public class Datastructures2 {
             
             double cijfer = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
             String result = df.format(cijfer);
+            // generate cijfer
+            
             Klas k = new Klas(klas);
+            // maak klas aan
             Student a = new Student(studentnummer, result);
+            // maak student aan 
             k.addStudent(a);
 //            System.out.println(k.toString());
             studentnummer++;
         }
         
 //        System.out.println(.toString);
+    }
+    
+    
+    public static int klassenAantal(int aantalStudentRichting, int aantalKlassen){
+        
+        if(aantalStudentRichting < 33){
+            return aantalKlassen;
+        }else {
+            aantalStudentRichting = aantalStudentRichting / 2;
+            aantalKlassen = aantalKlassen + 4;
+            return klassenAantal(aantalStudentRichting, aantalKlassen);
+        }
     }
     
 }

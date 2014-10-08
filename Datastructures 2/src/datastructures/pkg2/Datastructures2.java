@@ -32,11 +32,15 @@ public class Datastructures2 {
         int richtingNummer = 0;
         int getal = 1;
         int aantalKlassen = 4;
+        int aantalKlassenPerRichting;
         
         int aantalStudentRichting = aantalLeerlingen / 4;
         aantalKlassen = klassenAantal(aantalStudentRichting, aantalKlassen);
+        aantalKlassenPerRichting = aantalKlassen / 4;
         
-        System.out.println(aantalKlassen);      
+        System.out.println(aantalKlassen); 
+        System.out.println(aantalKlassenPerRichting);
+        
         
        
         
@@ -82,7 +86,7 @@ public class Datastructures2 {
         if(aantalStudentRichting < 33){
             return aantalKlassen;
         }else {
-            aantalStudentRichting = aantalStudentRichting / 2;
+            aantalStudentRichting = aantalStudentRichting - 32 ;
             aantalKlassen = aantalKlassen + 4;
             return klassenAantal(aantalStudentRichting, aantalKlassen);
         }

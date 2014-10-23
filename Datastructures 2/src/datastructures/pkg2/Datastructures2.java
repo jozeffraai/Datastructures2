@@ -84,6 +84,8 @@ public class Datastructures2 {
         for (Student s : studenten) {
             System.out.println(s);
         }
+        
+        // Url voor bubble sort: http://mathbits.com/MathBits/Java/arrays/Bubble.htm
     }
     
     public static int klassenAantal(int aantalStudentRichting, int aantalKlassen) {

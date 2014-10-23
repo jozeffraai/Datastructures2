@@ -7,8 +7,10 @@ package datastructures.pkg2;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import models.*;
+import nl.hva.dmci.ict.inf.ads.lib.StdRandom;
 
 /**
  *
@@ -76,17 +78,14 @@ public class Datastructures2 {
                 } 
 
             studenten[i] = s;
-            System.out.println(counter);
         }
-        
+        StdRandom.shuffle(studenten);
         System.out.println("StudentNummer\tCijfer\tKlas");
         for (Student s : studenten) {
             System.out.println(s);
         }
-
-        System.out.println(aantalKlassen);
     }
-
+    
     public static int klassenAantal(int aantalStudentRichting, int aantalKlassen) {
 
         if (aantalStudentRichting < 33) {

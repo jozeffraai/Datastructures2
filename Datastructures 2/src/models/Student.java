@@ -4,18 +4,41 @@
  * and open the template in the editor.
  */
 package models;
+
 /**
  *
  * @author bob
  */
-public class Student{
+public class Student {
+
     private int studentNummer;
     private String klasNaam;
+    private Klas klas;
     private String cijfer;
 
     public Student(int studentNummer, String cijfer) {
         this.studentNummer = studentNummer;
         this.cijfer = cijfer;
+    }
+
+    public Student() {
+
+    }
+
+    public String getKlasNaam() {
+        return klasNaam;
+    }
+
+    public void setKlasNaam(String klasNaam) {
+        this.klasNaam = klasNaam;
+    }
+
+    public Klas getKlas() {
+        return klas;
+    }
+
+    public void setKlas(Klas klas) {
+        this.klas = klas;
     }
 
     public int getStudentNummer() {
@@ -36,6 +59,6 @@ public class Student{
 
     @Override
     public String toString() {
-        return studentNummer + "\t\t" + cijfer;
+        return studentNummer + "\t" + cijfer + "\t"+ klas;
     }
 }

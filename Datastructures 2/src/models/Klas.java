@@ -22,6 +22,9 @@ public class Klas {
         student = new ArrayList<Student>();
     }
     
+    public Klas() {
+        
+    }
     
 
     public String getNaam() {
@@ -35,10 +38,17 @@ public class Klas {
     public void addStudent(Student s){
         student.add(s);
     }
+    
+    public void showStudents(){
+        for (int i = 0; i < student.size(); i++) {
+            System.out.println(student.get(i) + "\t"+ this.toString());
+        }
+        System.out.println("");
+    }
 
     @Override
     public String toString() {
-        return naam + "\t\t" + student;
+        return naam;
     }
     
     

@@ -35,6 +35,13 @@ public class HashFunction {
             long modelo = toAscii(test) % 10007;
             modeloNaam[i] = modelo;
         }
+        
+        String[] string_list = new String[modeloNaam.length];
+
+        for(int i = 0; i < modeloNaam.length; i++){
+           string_list[i] = String.valueOf(modeloNaam[i]);
+    
+}
                 System.out.println(modeloNaam.toString());
 	 
 	        HashFunction theFunc = new HashFunction(30);
@@ -54,7 +61,7 @@ public class HashFunction {
 	                "725", "998", "978", "988", "990", "989", "984", "320", "321",
 	                "400", "415", "450", "50", "660", "624" };
 	 
-	        theFunc.hashFunction2(modeloNaam, theFunc.theArray);
+	        theFunc.hashFunction2(string_list, theFunc.theArray);
 	 
 	        // Locate the value 660 in the Hash Table
 	 

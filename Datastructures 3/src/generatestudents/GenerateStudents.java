@@ -14,7 +14,7 @@ public class GenerateStudents {
      */
     public static void main(String[] args) {
         
-        StudentList students = new StudentList(10000);
+        StudentList students = new StudentList(20);
 
         
         Student[] naam = students.getList();

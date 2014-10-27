@@ -18,11 +18,13 @@ public class GenerateStudents {
 
         
         Student[] naam = students.getList();
+        long[] modeloNaam = new long[10000];
         
         for (int i = 0; i < naam.length; i++) {
             String test = naam[i].getLdap();
             long modelo = toAscii(test) % 10007;
             System.out.println(modelo);
+            modeloNaam[i] = modelo;
         }
     }
     

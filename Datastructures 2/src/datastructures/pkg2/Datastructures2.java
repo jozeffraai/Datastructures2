@@ -18,16 +18,10 @@ import nl.hva.dmci.ict.inf.ads.lib.StdRandom;
  */
 public class Datastructures2 {
 
-    /**
-     * @param args the command line arguments
-     */
-    private static String[] richting = {"G", "N", "S", "T"};
-    private static String[] laatsteGetal = {"1", "2", "3", "4"};
+    private static final String[] richting = {"G", "N", "S", "T"};
 
     public static void main(String[] args) {
         int studentnummer = 50060001;
-
-        String klas;
         int aantalLeerlingen = 200;
         int aantalKlassen = 4;
         int aantalKlassenPerRichting;
@@ -58,7 +52,7 @@ public class Datastructures2 {
         Student[] studenten = new Student[aantalLeerlingen];
 
         Random r = new Random();
-        DecimalFormat df = new DecimalFormat("##.0");
+        DecimalFormat df = new DecimalFormat(".0");
         counter = 0;
         for (int i = 0; i < studenten.length; i++) {
             Student s = new Student();
@@ -82,10 +76,12 @@ public class Datastructures2 {
         StdRandom.shuffle(studenten);
         System.out.println("StudentNummer\tCijfer\tKlas");
         for (Student s : studenten) {
-            System.out.println(s);
+//            System.out.println(s);
         }
-        
-        // Url voor bubble sort: http://mathbits.com/MathBits/Java/arrays/Bubble.htm
+        int [] test = {1,5,9,6,2,8,7,4,3};
+        System.out.println(Arrays.toString(test));
+        BubbleSort(test);
+        System.out.println(Arrays.toString(test));
     }
     
     public static int klassenAantal(int aantalStudentRichting, int aantalKlassen) {
@@ -98,5 +94,25 @@ public class Datastructures2 {
             return klassenAantal(aantalStudentRichting, aantalKlassen);
         }
     }
+    
+    public static void BubbleSort( int [ ] sort ) {
+     boolean flag = true;   // set flag to true to begin first pass
+     int temp;   //holding variable
+
+     while ( flag )
+     {
+            flag= false;    //set flag to false awaiting a possible swap
+            for(int i=0;  i < sort.length -1;  i++ )
+            {
+                   if ( sort[ i ] > sort[i+1] )   // change to > for ascending sort
+                   {
+                           temp = sort[ i ];                //swap elements
+                           sort[ i ] = sort[ i+1 ];
+                           sort[ i+1 ] = temp;
+                          flag = true;              //shows a swap occurred  
+                  } 
+            } 
+      } 
+} 
 
 }

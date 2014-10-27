@@ -1,6 +1,8 @@
 
 package generatestudents;
 
+import hashfunction.HashFunction;
+
 /**
  *
  * @author breud
@@ -21,9 +23,7 @@ public class GenerateStudents {
             String test = naam[i].getLdap();
             long modelo = toAscii(test) % 10007;
             System.out.println(modelo);
-            
         }
-        
     }
     
     
